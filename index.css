@@ -2,7 +2,6 @@
 
 body {
 	margin: 0;
-	overflow: hidden;
 }
 
 a {
@@ -13,28 +12,23 @@ a {
 /* Custom styles start here */
 
 body {
-	background-color: #000;
-	color: #fff;
+	overflow-x: hidden;
 	font-family: Roboto, Arial;
-}
-
-a {
-	color: #fff;
-	text-transform: uppercase;
 }
 
 /* Navbar styles here */
 
 nav {
-	position: sticky;
 	height: 60px;
-	display: flex;
-	position: absolute;
 	width: 100%;
+	display: flex;
+	position: fixed;
+	z-index: 1;
+	top: 0;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #333;
-	background-color: #0000;
+	background-color: #000;
 }
 
 #nav-links {
@@ -43,6 +37,8 @@ nav {
 }
 
 #nav-links a {
+	color: #fff;
+	text-transform: uppercase;
 	margin-right: 20px;
 	position: relative;
 }
@@ -61,12 +57,22 @@ nav {
 }
 
 /* First Section */
+#start {
+	background-color: #000;
+	color: #fff;
+}
+
 #start .title {
 	font-family: Orbitron;
 	font-weight: 900;
 	font-size: 65px;
 	width: 60%;
+	height: 100vh;
 	text-transform: uppercase;
+	vertical-align: middle;
+	letter-spacing: 10px;
+	display: table-cell;
+	padding-left: 15vw;
 }
 
 .space-background {
@@ -74,7 +80,6 @@ nav {
 	width: 100%;
 	height: 100%;
 	top: 0;
-	z-index: -1;
 }
 
 .space-dot {
