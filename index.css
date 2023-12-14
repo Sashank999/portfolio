@@ -1,0 +1,56 @@
+/* Reset defaults for body and anchors */
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+/* Custom styles start here */
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: Roboto, Arial;
+}
+
+a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/* Navbar styles here */
+
+nav {
+	height: 50px;
+	display: flex;
+	position: absolute;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav-links {
+	display: flex;
+}
+
+#nav-links a {
+	margin-right: 15px;
+	position: relative;
+}
+
+#nav-links a::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	border-top: 2px solid #fff;
+	transition: width ease-in 0.25s;
+}
+
+#nav-links a:hover::after {
+	width: 100%;
+}
