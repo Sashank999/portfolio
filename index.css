@@ -25,20 +25,24 @@ a {
 /* Navbar styles here */
 
 nav {
-	height: 50px;
+	position: sticky;
+	height: 60px;
 	display: flex;
 	position: absolute;
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 1px solid #333;
+	background-color: #0000;
 }
 
 #nav-links {
 	display: flex;
+	column-gap: 20px;
 }
 
 #nav-links a {
-	margin-right: 15px;
+	margin-right: 20px;
 	position: relative;
 }
 
@@ -53,4 +57,13 @@ nav {
 
 #nav-links a:hover::after {
 	width: 100%;
+}
+
+/* First Section */
+#start .title {
+	font-family: Orbitron;
+	font-weight: 900;
+	font-size: 65px;
+	width: 60%;
+	text-transform: uppercase;
 }
