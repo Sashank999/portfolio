@@ -83,7 +83,7 @@ nav a {
 	vertical-align: middle;
 	letter-spacing: 10px;
 	display: table-cell;
-	padding-left: 15vw;
+	padding-left: 12vw;
 	position: relative;
 }
 
@@ -170,4 +170,14 @@ nav a {
 :is(#start, #qualifications, #previous-projects, #contact, #thank-you):not(.visible),
 :is(#start, #qualifications, #previous-projects, #contact, #thank-you):not(.visible) a {
 	color: #0000;
+}
+
+/* Quotes */
+
+.quote {
+	position: absolute;
+	top: calc(50vh - 2 * 25px);
+	right: 12vw;
+	font-size: 25px;
+	width: 30vw;
 }
