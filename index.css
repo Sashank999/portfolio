@@ -1,5 +1,9 @@
 /* Reset defaults for body and anchors */
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 }
@@ -191,25 +195,4 @@ nav a {
 	right: 12vw;
 	font-size: 25px;
 	width: 30vw;
-}
-
-/* Custom cursor */
-
-#cursor {
-	position: fixed;
-	width: 25px;
-	height: 25px;
-	mix-blend-mode: difference;
-	top: 10px;
-	left: 10px;
-	z-index: 1;
-	background-color: #fff;
-	pointer-events: none;
-}
-
-#cursor div {
-	width: 15px;
-	height: 15px;
-	margin: 5px 0 0 5px;
-	background-color: #000;
 }
