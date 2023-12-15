@@ -161,4 +161,13 @@ nav a {
 
 /* Thank you section */
 
+/* Text animation for each section */
 
+#start, #qualifications, #previous-projects, #contact, #thank-you {
+	transition: color ease-in 1s;
+}
+
+:is(#start, #qualifications, #previous-projects, #contact, #thank-you):not(.visible),
+:is(#start, #qualifications, #previous-projects, #contact, #thank-you):not(.visible) a {
+	color: #0000;
+}
