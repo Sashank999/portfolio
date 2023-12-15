@@ -1,4 +1,4 @@
-const ALL_SECTIONS = ["#start", "#qualifications", "#previous-projects", "#contact", "#thank-you"];
+const ALL_SECTIONS = ["#start", "#about", "#qualifications", "#previous-projects", "#contact", "#thank-you"];
 const TOTAL_SECTIONS = ALL_SECTIONS.length;
 
 let count = 0;

@@ -87,6 +87,8 @@ nav a {
 	position: relative;
 }
 
+/* Space background */
+
 .space-background {
 	position: absolute;
 	background-color: #000;
@@ -100,6 +102,13 @@ nav a {
 	width: 2px;
 	height: 2px;
 	background-color: #fff;
+}
+
+/* About section */
+
+#about {
+	padding: 60px 15vw 20px 15vw;
+	line-height: 30px;
 }
 
 /* Qualifications section */
@@ -167,8 +176,8 @@ nav a {
 	transition: color ease-in 1s;
 }
 
-:is(#start, #qualifications, #previous-projects, #contact, #thank-you):not(.visible),
-:is(#start, #qualifications, #previous-projects, #contact, #thank-you):not(.visible) a {
+:is(#start, #about, #qualifications, #previous-projects, #contact, #thank-you):not(.visible),
+:is(#start, #about, #qualifications, #previous-projects, #contact, #thank-you):not(.visible) a {
 	color: #0000;
 }
 
