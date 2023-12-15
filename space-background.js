@@ -1,22 +1,24 @@
 const NUMBER_OF_DOTS = 20;
 
-const background = document.querySelector(".space-background");
+const backgrounds = document.querySelectorAll(".space-background");
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
-if (background) {
-	let newDot;
-	for (let i = 0; i < NUMBER_OF_DOTS; i++) {
-		newDot = document.createElement("div");
-		newDot.className = "space-dot";
-		background.appendChild(newDot);
-	}
+if (backgrounds.length) {
+	backgrounds.forEach((background) => {
+		let newDot;
+		for (let i = 0; i < NUMBER_OF_DOTS; i++) {
+			newDot = document.createElement("div");
+			newDot.className = "space-dot";
+			background.appendChild(newDot);
+		}
 
-	replaceDots();
-	setInterval(replaceDots, 1000);
+		replaceDots(background);
+		setInterval(() => replaceDots(background), 1000);
+	});
 }
 
-function replaceDots() {
+function replaceDots(background) {
 	// Change position of dots
 	[...background.children].forEach((dot) => {
 		dot.style = `top: ${randomBetween(1, windowHeight)}px; left: ${randomBetween(1, windowWidth - 10)}px;`;
