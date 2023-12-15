@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+	--nav-height: 60px;
+	--default-padding: 20px 15vw 0 15vw;
+}
+
 /* Reset defaults for body and anchors */
 
 * {
@@ -22,8 +28,8 @@ body {
 /* Navbar styles here */
 
 nav {
-	height: 60px;
-	width: 100%;
+	height: var(--nav-height);
+	width: 100vw;
 	display: flex;
 	position: fixed;
 	z-index: 1;
@@ -33,6 +39,7 @@ nav {
 	border-bottom: 1px solid #333;
 	font-family: Roboto, sans-serif;
 	background-color: #000;
+	padding: 0 15px;
 }
 
 nav a {
@@ -41,7 +48,6 @@ nav a {
 
 #nav-logo a {
 	display: block;
-	margin-left: 15px;
 	font-size: 28px;
 	font-family: Roboto, sans-serif;
 }
@@ -53,7 +59,6 @@ nav a {
 
 #nav-links a {
 	text-transform: uppercase;
-	margin-right: 20px;
 	position: relative;
 }
 
@@ -90,6 +95,8 @@ nav a {
 	display: table-cell;
 	padding-left: 12vw;
 	position: relative;
+	top: calc(4 * 75px - 0.5 * 100vh);
+	background-color: #0000;
 }
 
 /* Space background */
@@ -112,14 +119,14 @@ nav a {
 /* About section */
 
 #about {
-	padding: 60px 15vw 20px 15vw;
+	padding: var(--default-padding);
 	line-height: 30px;
 }
 
 /* Qualifications section */
 
 #qualifications {
-	padding: 60px 15vw 20px 15vw;
+	padding: var(--default-padding);
 	line-height: 30px;
 }
 
@@ -130,13 +137,13 @@ nav a {
 /* Previous projects section */
 
 #previous-projects {
-	padding: 60px 15vw 20px 15vw;
+	padding: var(--default-padding);
 }
 
 /* Contact section */
 
 #contact {
-	padding: 60px 15vw 160px 15vw;
+	padding: var(--default-padding);
 }
 
 .social-cards-container {
@@ -174,9 +181,14 @@ nav a {
 
 /* Thank you section */
 
+#thank-you {
+	margin-top: var(--nav-height);
+}
+
 /* Text animation for each section */
 
 #start, #about, #qualifications, #previous-projects, #contact, #thank-you {
+	scroll-margin: var(--nav-height);
 	width: 100vw;
 	transition: color ease-in 1s;
 }
@@ -194,4 +206,57 @@ nav a {
 	right: 12vw;
 	font-size: 25px;
 	width: 30vw;
+}
+
+/* Media queries for mobile view */
+
+@media only screen and (max-width: 600px) {
+	:root {
+		--nav-height: 120px;
+		--default-padding: 30px 5px;
+	}
+
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#start {
+		width: 100%;
+		margin-top: 60px;		
+		height: calc(100vh - 60px);
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#start .title, #thank-you .title {
+		width: 100vw;
+		top: calc(10vh);
+		padding-left: 20px;
+		font-size: 45px;
+		height: 100vh;
+	}
+
+	#start .quote {
+		/* position: static; */
+		font-size: 25px;
+		width: calc(100vw - 2 * 40px);
+		top: unset;
+		right: unset;
+		bottom: 100px;
+		margin: 0 30px;
+	}
+
+	#qualifications ul {
+		padding-left: 20px;
+	}
+
+	.social-card {
+		width: calc(100% - 2 * 20px);
+	}
+
+	#thank-you {
+		overflow: hidden;
+	}
 }
