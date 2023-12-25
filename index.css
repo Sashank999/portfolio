@@ -107,6 +107,7 @@ nav a {
 	width: 100%;
 	height: 100%;
 	top: 0;
+	contain: paint;
 }
 
 .space-dot {
@@ -250,6 +251,10 @@ nav a {
 
 	#qualifications ul {
 		padding-left: 20px;
+	}
+
+	#previous-projects a img {
+		width: calc(100vw - 20px);
 	}
 
 	.social-card {
