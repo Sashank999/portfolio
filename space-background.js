@@ -1,8 +1,8 @@
 const NUMBER_OF_DOTS = 20;
 
 const backgrounds = document.querySelectorAll(".space-background");
-const windowWidth = window.innerWidth;
-const windowHeight = window.innerHeight;
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
 
 if (backgrounds.length) {
 	backgrounds.forEach((background) => {
@@ -17,6 +17,11 @@ if (backgrounds.length) {
 		setInterval(() => replaceDots(background), 1000);
 	});
 }
+
+window.addEventListener("resize", () => {
+	windowWidth = window.innerWidth;
+	windowHeight = window.innerHeight;
+});
 
 function replaceDots(background) {
 	// Change position of dots
