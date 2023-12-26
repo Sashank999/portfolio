@@ -54,6 +54,7 @@ nav a {
 
 #nav-links {
 	display: flex;
+	justify-content: center;
 	column-gap: 20px;
 }
 
@@ -77,13 +78,15 @@ nav a {
 
 /* Title Section */
 
-#start, #thank-you {
+#start,
+#thank-you {
 	height: 100vh;
 	color: #fff;
 	position: relative;
 }
 
-#start .title, #thank-you .title {
+#start .title,
+#thank-you .title {
 	font-family: Roboto, sans-serif;
 	font-weight: 900;
 	font-size: 65px;
@@ -188,7 +191,12 @@ nav a {
 
 /* Text animation for each section */
 
-#start, #about, #qualifications, #previous-projects, #contact, #thank-you {
+#start,
+#about,
+#qualifications,
+#previous-projects,
+#contact,
+#thank-you {
 	scroll-margin: var(--nav-height);
 	width: 100vw;
 	transition: color ease-in 1s;
@@ -213,7 +221,7 @@ nav a {
 
 @media only screen and (max-width: 600px) {
 	:root {
-		--nav-height: 120px;
+		--nav-height: 100px;
 		--default-padding: 30px 5px;
 	}
 
@@ -225,13 +233,14 @@ nav a {
 
 	#start {
 		width: 100%;
-		margin-top: 60px;		
+		margin-top: 60px;
 		height: calc(100vh - 60px);
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	#start .title, #thank-you .title {
+	#start .title,
+	#thank-you .title {
 		width: 100vw;
 		top: calc(10vh);
 		padding-left: 20px;
