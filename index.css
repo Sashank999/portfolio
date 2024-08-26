@@ -55,7 +55,7 @@ nav a {
 #nav-links {
 	display: flex;
 	justify-content: center;
-	column-gap: 20px;
+	column-gap: 12.5px;
 }
 
 #nav-links a {
@@ -136,6 +136,30 @@ nav a {
 
 #qualifications a:hover {
 	text-decoration: underline;
+}
+
+#nptel-certifications-table {
+	width: calc(100% - 2 * 20px);
+	border: 2px solid #e5e2e2;
+	border-radius: 10px;
+}
+
+#nptel-certifications-table thead {
+	background-color: #eee;
+	border-radius: 10px;
+}
+
+#nptel-certifications-table td {
+	border: 2px solid #eee;
+	border-collapse: collapse;
+}
+
+#nptel-certifications-table tr:nth-child(2n + 1) {
+	background-color: #eee;
+}
+
+#nptel-certifications-table tr:last-child {
+	border-radius: 10px;
 }
 
 /* Previous projects section */
