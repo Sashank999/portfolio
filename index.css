@@ -138,6 +138,10 @@ nav a {
 	text-decoration: underline;
 }
 
+#qualifications > ul > li:not(:first-child) {
+	margin-top: 5px;
+}
+
 #nptel-certifications-table {
 	width: calc(100% - 2 * 20px);
 	border: 2px solid #e5e2e2;
@@ -211,6 +215,12 @@ nav a {
 
 #thank-you {
 	margin-top: var(--nav-height);
+}
+
+#thank-you .citation {
+	position: absolute;
+	bottom: 0;
+	margin: 10px;
 }
 
 /* Text animation for each section */
