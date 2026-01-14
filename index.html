@@ -144,28 +144,7 @@
 
 		<div id="previous-projects">
 			<h3>My previous projects:</h3>
-			<a href="https://www.github.com/Sashank999/spacex-clone" target="_blank" aria-label="My SpaceX clone GitHub repository">
-				<img
-					src="https://github-readme-stats.vercel.app/api/pin/?username=Sashank999&repo=spacex-clone&theme=graywhite"
-					alt="My SpaceX clone GitHub repository repo card"
-				/>
-			</a>
-			<a href="https://www.github.com/Sashank999/static-qr-gen" target="_blank" aria-label="A static QR code generator, written in Angular">
-				<img
-					src="https://github-readme-stats.vercel.app/api/pin/?username=Sashank999&repo=static-qr-gen&theme=graywhite"
-					alt="Angular QR code generator repo card"
-				/>
-			</a>
-			<a
-				href="https://www.github.com/Sashank999/static-qr-gen-react"
-				target="_blank"
-				aria-label="A static QR code generator, written in React using Next.js"
-			>
-				<img
-					src="https://github-readme-stats.vercel.app/api/pin/?username=Sashank999&repo=static-qr-gen-react&theme=graywhite"
-					alt="React QR code generator repo card"
-				/>
-			</a>
+			<div class="repo-card-container"></div>
 		</div>
 
 		<div id="contact">
@@ -202,16 +181,17 @@
 				<span>You</span>
 			</div>
 			<div class="citation">
-				The quotes displayed in the first screen (if no error occured) were fetched from
+				The quotes displayed in the first screen (if no error occured) were obtained from
 				<a href="https://github.com/dwyl/quotes">dwyl's quotes repo</a>. Specific commit of the quote can be found in the
 				<a href="https://github.com/Sashank999/Sashank999.github.io/blob/master/.github/workflows/Publish%20to%20GH%20Pages.yml"
 					>publishing GitHub action workflow file</a
-				>. Thank you to GitHub for free hosting.
+				>. Thank you to GitHub for free hosting and for the APIs to fetch repository data and emojis.
 			</div>
 		</div>
 
 		<script src="quotes.js"></script>
 		<script src="space-background.js"></script>
 		<script src="fade-and-restore.js"></script>
+		<script src="repo-cards.js"></script>
 	</body>
 </html>

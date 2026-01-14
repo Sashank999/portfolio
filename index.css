@@ -172,6 +172,56 @@ nav a {
 	padding: var(--default-padding);
 }
 
+#previous-projects .repo-card-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+#previous-projects .repo-card {
+	display: flex;
+	flex-direction: column;
+	color: black;
+	padding: 15px;
+	border: 2px solid #999;
+	border-radius: 5px;
+	width: calc(50% - 10px);
+	min-height: 125px;
+}
+
+#previous-projects .repo-card:hover {
+	background-color: #eee;
+}
+
+#previous-projects .repo-card .title {
+	margin-bottom: 5px;
+	flex: 0 0;
+	font-size: 18px;
+}
+
+#previous-projects .repo-card .title svg {
+	margin-right: 10px;
+}
+
+#previous-projects .repo-card .description {
+	flex: 2 0;
+}
+
+#previous-projects .repo-card .description img {
+	height: 16px;
+}
+
+#previous-projects .repo-card .info {
+	flex: 0 0;
+}
+
+#previous-projects .repo-card .info span {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 5px;
+	gap: 2px;
+}
+
 /* Contact section */
 
 #contact {
