@@ -5,6 +5,8 @@ node_modules
 out
 dist
 *.tgz
+/quotes_indices.bin
+/randomised_quotes.txt
 
 # code coverage
 coverage

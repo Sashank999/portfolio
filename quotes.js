@@ -1,4 +1,4 @@
-// Fetches a quote and displays it in the first section
+// Fetches a quote and displays it in the first section.
 
 (async () => {
 	try {
@@ -16,7 +16,7 @@
 
 		const quoteIndices = new Uint8Array(await quoteIndicesResponse.arrayBuffer());
 		const quoteFromByte = quoteIndices[0] * 2 ** 16 + quoteIndices[1] * 2 ** 8 + quoteIndices[2];
-		const quoteToByte = quoteIndices[3] * 2 ** 16 + quoteIndices[4] * 2 ** 8 + quoteIndices[5] - 1;
+		const quoteToByte = quoteIndices[3] * 2 ** 16 + quoteIndices[4] * 2 ** 8 + quoteIndices[5] - 1; // "- 1" to not fetch the newline.
 		const quoteResponse = await fetch("/randomised_quotes.txt", { headers: { Range: `bytes=${quoteFromByte}-${quoteToByte}` } });
 		if (quoteResponse.status !== 206) throw Error(`Error fetching quote - status ${quoteResponse.status}.`);
 
