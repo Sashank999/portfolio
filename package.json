@@ -1,0 +1,12 @@
+{
+	"name": "portfolio",
+	"private": true,
+	"homepage": "https://github.com/Sashank999/portfolio",
+	"devDependencies": {
+		"prettier": "^3.9.6"
+	},
+	"scripts": {
+		"serve": "busybox httpd -f -vv -h . -p 8080",
+		"format": "prettier -w . -l"
+	}
+}
