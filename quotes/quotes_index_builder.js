@@ -22,6 +22,22 @@ function shuffleArray(array) {
 	}
 }
 
+function splitNumberTo3Bytes(number) {
+	let array = [];
+	while (number > 0) {
+		array.unshift(number % ONE_BYTE);
+		number = Math.floor(number / ONE_BYTE);
+	}
+
+	while (array.length < 3) {
+		array.unshift(0);
+	}
+
+	if (array.length > 3) throw Error(`Quote index exceeded 2 ** 24.`);
+
+	return new Uint8Array(array);
+}
+
 (async () => {
 	// Storing command line arguments.
 	const quotesFilePath = process.argv[2];
@@ -46,19 +62,7 @@ function shuffleArray(array) {
 		const quoteByteLength = new Blob([formattedQuote]).size;
 		quoteIndex += quoteByteLength;
 
-		let quoteIndexParts = [],
-			quoteIndexCopy = quoteIndex;
-		while (quoteIndexCopy > 0) {
-			quoteIndexParts.unshift(quoteIndexCopy % ONE_BYTE);
-			quoteIndexCopy = Math.floor(quoteIndexCopy / ONE_BYTE);
-		}
-
-		while (quoteIndexParts.length < 3) {
-			quoteIndexParts.unshift(0);
-		}
-
-		if (quoteIndexParts.length > 3) throw Error(`Quote index ${quoteIndex} exceeded 2 ** 24.`);
-
-		indexFile.write(new Uint8Array(quoteIndexParts));
+		const quoteIndexBytes = splitNumberTo3Bytes(quoteIndex);
+		indexFile.write(quoteIndexBytes);
 	}
 })();
